@@ -18,7 +18,8 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        width: 151,
+        width: 300,
+        height: 'auto'
     },
 }));
 
@@ -31,7 +32,7 @@ export default function MediaControlCard(props) {
         <Card className={classes.root}>
             <CardMedia
                 className={classes.cover}
-                image="/static/images/cards/live-from-space.jpg"
+                image={props.volumeInfo.imageLinks.smallThumbnail}
                 title="Live from space album cover"
             />
             <div className={classes.details}>
